@@ -6,10 +6,10 @@
 </head>
 <body>
     <h1>Liste fichiers</h1>
-  
+    <h3 th:text="${context}"></h3>
     <table>
       <tr th:each="file : ${files}">
-        <td> <a th:text="${file}" th:href="@{'http://localhost:8080/player/'+${file}}"></a> </td>
+        <td> <a th:text="${file}" th:href="@{${context}+'/player/'+${file}}"></a> </td>
       </tr>
     </table>
   
