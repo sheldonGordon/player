@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Folder</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>Liste fichiers</h1>
+  
+    <table>
+      <tr th:each="file : ${files}">
+        <td> <a th:text="${file}" th:href="@{'http://localhost:8080/player/'+${file}}"></a> </td>
+      </tr>
+    </table>
+  
+</body>
+</html>
